@@ -26,5 +26,5 @@ body {
   background: #fff;
   border-radius: 50%;
 
-  @apply lg:w-[15px] lg:h-[15px] lg:left-[-104px] xl:left-[-105.5px] xl:w-[18px] xl:h-[18px];
+  @apply left-[-37.5px] h-[10px] w-[10px] md:left-[-69.5px] lg:left-[-104px] lg:h-[15px] lg:w-[15px] xl:left-[-105.5px] xl:h-[18px] xl:w-[18px];
 }

@@ -2,9 +2,9 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="lg:pt-24 flex flex-col sm:h-[100dvh]">
-      <h1 className="font-medium lg:text-6xl xl:text-8xl">About me</h1>
-      <div className="font-medium lg:text-3xl xl:text-4xl flex flex-col gap-y-5 lg:max-w-[70%] xl:max-w-[75%] mt-auto mb-auto">
+    <div className="flex h-[100dvh] flex-col pt-20 md:pt-24">
+      <h1 className="text-5xl font-medium lg:text-6xl xl:text-8xl">About me</h1>
+      <div className="mb-auto mt-auto flex flex-col gap-y-5 text-xl font-medium md:max-w-[80%] md:text-2xl lg:max-w-[70%] lg:text-3xl xl:max-w-[75%] xl:text-4xl">
         <p>
           Hi there 👋🏻! I’m Denys Pupin – a software developer with over 7 years
           of experience in various business areas. I’m skilled in the full

@@ -1,19 +1,22 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
+import * as motion from "motion/react-client";
 
 const Home = () => {
   return (
-    <div className="flex flex-row h-[100dvh] justify-between items-center">
+    <div className="flex h-[100dvh] flex-col justify-center gap-y-10 md:flex-row md:items-center md:justify-between md:gap-y-0">
       <div className="flex items-center gap-x-8">
-        <Image
-          src={"/foto.jpg"}
-          width={165}
-          height={165}
-          priority={true}
-          alt="Denys's Pupin photo"
-          className="rounded-3xl lg:w-[145px] h-[145px] xl:w-[165px] xl:h-[165px]"
-        />
-        <h1 className="font-medium lg:text-6xl">
+        <motion.div whileHover={{ scale: 1.1, rotate: -2 }}>
+          <Image
+            src={"/foto.jpg"}
+            width={165}
+            height={165}
+            priority={true}
+            alt="Denys's Pupin photo"
+            className="h-[120px] w-[120px] rounded-3xl lg:h-[145px] lg:w-[145px] xl:h-[165px] xl:w-[165px]"
+          />
+        </motion.div>
+        <h1 className="text-4xl font-medium lg:text-6xl">
           Hello 👋🏻 <br></br> I&apos;m{" "}
           <span className="text-accent">Denys Pupin</span>!
         </h1>

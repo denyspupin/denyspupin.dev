@@ -13,10 +13,10 @@ const Home = () => {
             height={165}
             priority={true}
             alt="Denys's Pupin photo"
-            className="h-[120px] w-[120px] rounded-3xl lg:h-[145px] lg:w-[145px] xl:h-[165px] xl:w-[165px]"
+            className="h-[100px] w-[100px] rounded-3xl lg:h-[145px] lg:w-[145px] xl:h-[165px] xl:w-[165px]"
           />
         </motion.div>
-        <h1 className="text-4xl font-medium lg:text-6xl">
+        <h1 className="text-2xl font-medium lg:text-6xl">
           Hello 👋🏻 <br></br> I&apos;m{" "}
           <span className="text-accent">Denys Pupin</span>!
         </h1>

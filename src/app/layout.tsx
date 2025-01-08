@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GAID!} />
+        <SpeedInsights />
         <main className="px-6 md:px-12 lg:px-16 xl:px-32">{children}</main>
       </body>
     </html>

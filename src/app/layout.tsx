@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GAID!} />
         <main className="px-6 md:px-12 lg:px-16 xl:px-32">{children}</main>
       </body>
     </html>

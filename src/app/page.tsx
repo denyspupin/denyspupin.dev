@@ -12,7 +12,7 @@ const Home = () => {
             width={165}
             height={165}
             priority={true}
-            alt="Denys's Pupin photo"
+            alt="Denys's Pupin profile photo"
             className="h-[100px] w-[100px] rounded-3xl lg:h-[145px] lg:w-[145px] xl:h-[165px] xl:w-[165px]"
           />
         </motion.div>

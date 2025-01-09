@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import FloatingNavbar from "@/components/FloatingNavbar";
+import * as motion from "motion/react-client";
+import { AnimatePresence } from "motion/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,7 +26,19 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GAID!} />
         <SpeedInsights />
-        <main className="px-6 md:px-12 lg:px-16 xl:px-32">{children}</main>
+        <AnimatePresence>
+          <motion.main
+            className="px-6 md:px-12 lg:px-16 xl:px-32"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              duration: 0.4,
+            }}
+          >
+            {children}
+          </motion.main>
+        </AnimatePresence>
+        <FloatingNavbar />
       </body>
     </html>
   );

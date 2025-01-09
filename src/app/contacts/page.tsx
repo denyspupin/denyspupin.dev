@@ -1,3 +1,4 @@
+import FloatingNavbar from "@/components/FloatingNavbar";
 import React from "react";
 
 const Contacts = () => {

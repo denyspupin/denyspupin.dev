@@ -1,6 +1,3 @@
-import FloatingNavbar from "@/components/FloatingNavbar";
-import React from "react";
-
 const About = () => {
   return (
     <div className="flex h-[100dvh] flex-col pt-20 md:pt-24">

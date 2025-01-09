@@ -1,6 +1,3 @@
-import FloatingNavbar from "@/components/FloatingNavbar";
-import React from "react";
-
 const Contacts = () => {
   return (
     <div className="flex h-[100dvh] flex-col justify-center gap-y-10">

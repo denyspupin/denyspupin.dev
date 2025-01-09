@@ -1,3 +1,5 @@
+import CopyButton from "@/components/CopyButton";
+
 const Contacts = () => {
   return (
     <div className="flex h-[100dvh] flex-col justify-center gap-y-10">
@@ -21,6 +23,7 @@ const Contacts = () => {
           >
             denyspupin.dev@gmail.com
           </a>
+          <CopyButton value="denyspupin.dev@gmail.com" />
         </p>
       </div>
     </div>

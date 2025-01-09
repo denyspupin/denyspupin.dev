@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import FloatingNavbar from "@/components/FloatingNavbar";
 import * as motion from "motion/react-client";
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GAID!} />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GAID!} />
         <SpeedInsights />
         <AnimatePresence>
           <motion.main

@@ -1,4 +1,17 @@
 import CopyButton from "@/components/CopyButton";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contacts",
+  description:
+    "Get in touch with Denys Pupin for collaboration, inquiries, or project discussions.",
+  openGraph: {
+    title: "Contact me - Denys Pupin | Software Engineer",
+    description:
+      "Reach out to Denys Pupin for any questions or collaborations related to software development.",
+    url: "https://denyspupin.dev/contacts",
+  },
+};
 
 const Contacts = () => {
   return (

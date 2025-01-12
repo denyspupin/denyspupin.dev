@@ -1,6 +1,16 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import * as motion from "motion/react-client";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  description:
+    "Explore Denys Pupin's portfolio showcasing skills and experience.",
+  openGraph: {
+    title: "Denys Pupin – Software Engineer",
+    url: "https://denyspupin.dev",
+  },
+};
 
 const Home = () => {
   return (

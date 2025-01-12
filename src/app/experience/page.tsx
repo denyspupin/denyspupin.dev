@@ -1,5 +1,18 @@
 import { experience } from "@/data/experiences";
 import * as motion from "motion/react-client";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Professional Experience",
+  description:
+    "Explore Denys Pupin's professional experience in software development, including roles, achievements, and technologies used.",
+  openGraph: {
+    title: "Professional Experience - Denys Pupin",
+    description:
+      "Detailed overview of Denys Pupin's career in software development, highlighting key roles and contributions.",
+    url: "https://denyspupin.dev/experience",
+  },
+};
 
 const Experience = () => {
   return (

@@ -1,3 +1,17 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About me",
+  description:
+    "Learn more about Denys Pupin, a dedicated software developer specializing in building efficient and scalable web applications.",
+  openGraph: {
+    title: "About me - Software Engineer",
+    description:
+      "Detailed information about Denys Pupin's journey, skills, and experience in software development.",
+    url: "https://denyspupin.dev/about",
+  },
+};
+
 const About = () => {
   return (
     <div className="flex h-[100dvh] flex-col pt-20 md:pt-24">

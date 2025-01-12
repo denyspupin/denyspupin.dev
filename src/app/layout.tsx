@@ -13,7 +13,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Denys Pupin - Software Developer",
+  title: {
+    template: "%s | Denys Pupin - Software Engineer",
+    default: "Denys Pupin - Software Engineer",
+  },
 };
 
 export default function RootLayout({

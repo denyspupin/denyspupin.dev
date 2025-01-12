@@ -6,8 +6,12 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   description:
     "Explore Denys Pupin's portfolio showcasing skills and experience.",
+  keywords:
+    "Denys Pupin, software developer, web development, portfolio, scalable applications, modern web design",
   openGraph: {
     title: "Denys Pupin – Software Engineer",
+    description: "Discover the work and projects of Denys Pupin.",
+    images: "https://denyspupin.dev/og_iamge.jpg",
     url: "https://denyspupin.dev",
   },
 };

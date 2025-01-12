@@ -6,10 +6,13 @@ export const metadata: Metadata = {
   title: "Professional Experience",
   description:
     "Explore Denys Pupin's professional experience in software development, including roles, achievements, and technologies used.",
+  keywords:
+    "Denys Pupin experience, professional roles, software developer, achievements, web technologies, career history",
   openGraph: {
     title: "Professional Experience - Denys Pupin",
     description:
       "Detailed overview of Denys Pupin's career in software development, highlighting key roles and contributions.",
+    images: "https://denyspupin.dev/og_iamge.jpg",
     url: "https://denyspupin.dev/experience",
   },
 };

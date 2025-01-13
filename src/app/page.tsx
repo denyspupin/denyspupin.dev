@@ -4,6 +4,7 @@ import * as motion from "motion/react-client";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Denys Pupin – Software Engineer",
   description:
     "Explore Denys Pupin's portfolio showcasing skills and experience.",
   keywords:

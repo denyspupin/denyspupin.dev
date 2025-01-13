@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
 };
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <div className="flex h-[100dvh] flex-col pt-20 md:pt-24">
       <h1 className="text-5xl font-medium lg:text-6xl xl:text-8xl">About me</h1>

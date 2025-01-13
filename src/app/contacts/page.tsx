@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 };
 
-const Contacts = () => {
+const Contacts: React.FC = () => {
   return (
     <div className="flex h-[100dvh] flex-col justify-center gap-y-10">
       <h1 className="text-6xl font-medium md:text-8xl">Contacts</h1>

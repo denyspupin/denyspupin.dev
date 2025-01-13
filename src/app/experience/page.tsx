@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
 };
 
-const Experience = () => {
+const Experience: React.FC = () => {
   return (
     <div className="pt-10 md:pt-16 lg:pt-24">
       <h1 className="text-3xl font-medium md:text-5xl lg:text-6xl xl:text-8xl">

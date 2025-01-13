@@ -1,24 +1,21 @@
+import { NavbarLink } from "@/types/navbar";
 import Link from "next/link";
 
-const Navbar = () => {
+type Props = {
+  links: NavbarLinks;
+};
+
+const Navbar: React.FC<Props> = ({ links }) => {
   return (
     <nav>
       <ul className="flex flex-row justify-center gap-x-4 text-right text-xl font-medium transition-colors md:flex-col md:gap-x-0 md:gap-y-4 md:text-4xl lg:gap-y-5 xl:gap-y-8 xl:text-5xl">
-        <li>
-          <Link href="about" className="hover:text-accent">
-            About me
-          </Link>
-        </li>
-        <li>
-          <Link href="experience" className="hover:text-accent">
-            Experience
-          </Link>
-        </li>
-        <li>
-          <Link href="contacts" className="hover:text-accent">
-            Contacts
-          </Link>
-        </li>
+        {links.map((link: NavbarLink) => (
+          <li key={link.id}>
+            <Link href={link.href} className="hover:text-accent">
+              {link.label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );

@@ -1,22 +1,9 @@
 import { experience } from "@/data/experience";
+import getMetadataByPage from "@/helpers/getMetadataByPage";
 import * as motion from "motion/react-client";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Professional Experience",
-  description:
-    "Explore Denys Pupin's professional experience in software development, including roles, achievements, and technologies used.",
-  keywords:
-    "Denys Pupin experience, professional roles, software developer, achievements, web technologies, career history",
-  openGraph: {
-    title: "Professional Experience - Denys Pupin",
-    description:
-      "Detailed overview of Denys Pupin's career in software development, highlighting key roles and contributions.",
-    images: "https://denyspupin.dev/og_image.jpg",
-    url: "https://denyspupin.dev/experience",
-  },
-};
-
+export const metadata: Metadata = getMetadataByPage("experience");
 const Experience: React.FC = () => {
   return (
     <div className="pt-10 md:pt-16 lg:pt-24">

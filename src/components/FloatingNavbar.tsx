@@ -5,8 +5,14 @@ import * as motion from "motion/react-client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { GoHomeFill } from "react-icons/go";
+import { NavbarLink, NavbarLinks } from "@/types/navbar";
 
-const FloatingNavbar = () => {
+type Props = {
+  links: NavbarLinks;
+  showHomeLink?: boolean;
+};
+
+const FloatingNavbar: React.FC<Props> = ({ links, showHomeLink }) => {
   const path = usePathname();
 
   // Do not show floating navbar on the home page
@@ -19,18 +25,21 @@ const FloatingNavbar = () => {
         className="bg-primary fixed bottom-0 left-0 right-0 z-50 flex justify-center p-5"
       >
         <ul className="text-md flex flex-row items-center gap-x-6 rounded-lg bg-[rgb(21,21,21)] px-6 py-3 font-medium md:text-xl">
-          <li>
-            <Link href="/">
-              <GoHomeFill />
-            </Link>
-          </li>
-          {menu.map((item) => (
-            <li key={item.id}>
+          {showHomeLink && (
+            <li>
+              <Link href="/">
+                <GoHomeFill />
+              </Link>
+            </li>
+          )}
+
+          {links.map((link: NavbarLink) => (
+            <li key={link.id}>
               <Link
-                href={item.href}
-                className={`hover:text-accent ${path === `/${item.href}` ? "text-accent" : ""}`}
+                href={link.href}
+                className={`hover:text-accent ${path === `/${link.href}` ? "text-accent" : ""}`}
               >
-                {item.name}
+                {link.label}
               </Link>
             </li>
           ))}
@@ -39,23 +48,5 @@ const FloatingNavbar = () => {
     </AnimatePresence>
   );
 };
-
-export const menu = [
-  {
-    id: 1,
-    name: "About me",
-    href: "about",
-  },
-  {
-    id: 2,
-    name: "Experience",
-    href: "experience",
-  },
-  {
-    id: 3,
-    name: "Contacts",
-    href: "contacts",
-  },
-];
 
 export default FloatingNavbar;

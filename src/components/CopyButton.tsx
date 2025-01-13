@@ -9,7 +9,7 @@ type Props = {
   value: string;
 };
 
-const CopyButton = ({ value }: Props) => {
+const CopyButton: React.FC<Props> = ({ value }) => {
   const [showPopup, setShowPopup] = useState(false);
 
   const copyToClipboard = (value: string) => {

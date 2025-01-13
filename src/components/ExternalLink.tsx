@@ -10,19 +10,24 @@ type Props = {
   className?: string;
 };
 
-const ExternalLink: React.FC<Props> = (props) => {
+const ExternalLink: React.FC<Props> = ({
+  href,
+  children,
+  openInNewTab,
+  className,
+}) => {
   const sendEventToGA = (value: string) => {
     sendGAEvent("event", "link_clicked", { value });
   };
 
   return (
     <a
-      href={props.href}
-      target={props.openInNewTab ? "_blank" : ""}
-      className={props.className}
-      onClick={() => sendEventToGA(props.href)}
+      href={href}
+      target={openInNewTab ? "_blank" : ""}
+      className={className}
+      onClick={() => sendEventToGA(href)}
     >
-      {props.children}
+      {children}
     </a>
   );
 };

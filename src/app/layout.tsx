@@ -4,6 +4,7 @@ import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import FloatingNavbar from "@/components/FloatingNavbar";
+import navbarLinks from "@/data/navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,7 +29,7 @@ export default function RootLayout({
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GAID!} />
         <SpeedInsights />
         {children}
-        <FloatingNavbar />
+        <FloatingNavbar links={navbarLinks} showHomeLink />
       </body>
     </html>
   );

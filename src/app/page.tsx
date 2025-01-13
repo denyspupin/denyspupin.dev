@@ -2,20 +2,10 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import * as motion from "motion/react-client";
 import { Metadata } from "next";
+import navbarLinks from "@/data/navbar";
+import getMetadataByPage from "@/helpers/getMetadataByPage";
 
-export const metadata: Metadata = {
-  title: "Denys Pupin – Software Engineer",
-  description:
-    "Explore Denys Pupin's portfolio showcasing skills and experience.",
-  keywords:
-    "Denys Pupin, software developer, web development, portfolio, scalable applications, modern web design",
-  openGraph: {
-    title: "Denys Pupin – Software Engineer",
-    description: "Discover the work and projects of Denys Pupin.",
-    images: "https://denyspupin.dev/og_image.jpg",
-    url: "https://denyspupin.dev",
-  },
-};
+export const metadata: Metadata = getMetadataByPage("home");
 
 const Home: React.FC = () => {
   return (
@@ -36,7 +26,7 @@ const Home: React.FC = () => {
           I&apos;m <span className="text-accent">Denys Pupin</span>!
         </h1>
       </div>
-      <Navbar />
+      <Navbar links={navbarLinks} />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { NavbarLink } from "@/types/navbar";
+import { NavbarLink, NavbarLinks } from "@/types/navbar";
 import Link from "next/link";
 
 type Props = {

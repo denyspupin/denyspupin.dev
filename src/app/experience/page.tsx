@@ -1,4 +1,4 @@
-import { experience } from "@/data/experiences";
+import { experience } from "@/data/experience";
 import * as motion from "motion/react-client";
 import { Metadata } from "next";
 

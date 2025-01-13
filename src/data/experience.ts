@@ -1,8 +1,10 @@
-export const experience = {
+import { Experience } from "@/types/experience";
+
+export const experience: Experience = {
   title: "Experience",
   jobs: [
     {
-      id: 1,
+      id: "1",
       role: "Software Engineer,  Commerzbank AG",
       period: "July 2024 –  Present",
       companyDescription:
@@ -12,7 +14,7 @@ export const experience = {
       skills: ["TypeScript", "React", "C#", "VB", "Software Architecture"],
     },
     {
-      id: 2,
+      id: "2",
       role: "Senior Full-Stack Developer,  Keystone Education Group AB",
       period: "Feb 2024 –  July 2024",
       companyDescription:
@@ -31,7 +33,7 @@ export const experience = {
       ],
     },
     {
-      id: 3,
+      id: "3",
       role: "Software developer,  MDriven AB",
       period: "Jan 2018 - Feb 2024",
       companyDescription:
@@ -49,7 +51,7 @@ export const experience = {
       ],
     },
     {
-      id: 4,
+      id: "4",
       role: "Software developer consultant,  Perrigo Nordic AB",
       period: "Nov 2023 – Feb 2024",
       companyDescription:
@@ -68,7 +70,7 @@ export const experience = {
       ],
     },
     {
-      id: 5,
+      id: "5",
       role: "Software developer consultant,  Kvadrat AB",
       period: "Mar 2021 –  Dec 2023",
       companyDescription:
@@ -87,7 +89,7 @@ export const experience = {
       ],
     },
     {
-      id: 6,
+      id: "6",
       role: "Software developer consultant,  Wildfire AB",
       period: "Apr 2022 –  Dec 2023",
       companyDescription:
@@ -106,7 +108,7 @@ export const experience = {
       ],
     },
     {
-      id: 7,
+      id: "7",
       role: "Software developer consultant,  Husbilskompisar AB",
       period: "Sep 2022 –  Apr 2023",
       companyDescription:
@@ -124,7 +126,7 @@ export const experience = {
       ],
     },
     {
-      id: 8,
+      id: "8",
       role: "Software developer consultant,  Easyarr AB",
       period: "Mar 2022 –  Nov 2022",
       companyDescription:
@@ -134,7 +136,7 @@ export const experience = {
       skills: ["C#", ".NET Core", "Aspose", "Database Architecture", "CI/CD"],
     },
     {
-      id: 9,
+      id: "9",
       role: "Software developer consultant,  SciFree AB",
       period: "Oct 2019 –  Dec 2022",
       companyDescription:

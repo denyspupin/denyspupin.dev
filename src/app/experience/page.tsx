@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Professional Experience - Denys Pupin",
     description:
       "Detailed overview of Denys Pupin's career in software development, highlighting key roles and contributions.",
-    images: "https://denyspupin.dev/og_iamge.jpg",
+    images: "https://denyspupin.dev/og_image.jpg",
     url: "https://denyspupin.dev/experience",
   },
 };

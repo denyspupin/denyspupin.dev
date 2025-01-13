@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "About me - Software Engineer",
     description:
       "Detailed information about Denys Pupin's journey, skills, and experience in software development.",
-    images: "https://denyspupin.dev/og_iamge.jpg",
+    images: "https://denyspupin.dev/og_image.jpg",
     url: "https://denyspupin.dev/about",
   },
 };

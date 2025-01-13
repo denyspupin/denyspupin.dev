@@ -29,18 +29,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GAID!} />
         <SpeedInsights />
-        <AnimatePresence>
-          <motion.main
-            className="px-6 md:px-12 lg:px-16 xl:px-32"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{
-              duration: 0.4,
-            }}
-          >
-            {children}
-          </motion.main>
-        </AnimatePresence>
+        {children}
         <FloatingNavbar />
       </body>
     </html>

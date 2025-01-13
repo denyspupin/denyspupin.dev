@@ -4,8 +4,6 @@ import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import FloatingNavbar from "@/components/FloatingNavbar";
-import * as motion from "motion/react-client";
-import { AnimatePresence } from "motion/react";
 
 const inter = Inter({
   subsets: ["latin"],

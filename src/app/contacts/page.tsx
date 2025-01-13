@@ -1,7 +1,5 @@
-"use client";
-
 import CopyButton from "@/components/CopyButton";
-import { sendGAEvent } from "@next/third-parties/google";
+import ExternalLink from "@/components/ExternalLink";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,29 +18,23 @@ export const metadata: Metadata = {
 };
 
 const Contacts: React.FC = () => {
-  const sendEventToGA = (value: string) => {
-    sendGAEvent("event", "link_clicked", { value });
-  };
-
   return (
     <div className="flex h-[100dvh] flex-col justify-center gap-y-10">
       <h1 className="text-6xl font-medium md:text-8xl">Contacts</h1>
       <div className="flex flex-col gap-y-1 text-lg md:text-3xl">
         <p>
           Feel free to explore my{" "}
-          <a
-            onClick={() => sendEventToGA("LinkedIn")}
+          <ExternalLink
             href="https://www.linkedin.com/in/denyspupin/"
-            target="_blank"
             className="text-accent underline"
+            openInNewTab
           >
             LinkedIn
-          </a>
+          </ExternalLink>
         </p>
         <p>
           or connect via email at{" "}
           <a
-            onClick={() => sendEventToGA("Email")}
             href="mailto:denyspupin.dev@gmail.com"
             className="text-accent underline"
           >

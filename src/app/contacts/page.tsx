@@ -1,3 +1,5 @@
+"use client";
+
 import CopyButton from "@/components/CopyButton";
 import { sendGAEvent } from "@next/third-parties/google";
 import { Metadata } from "next";

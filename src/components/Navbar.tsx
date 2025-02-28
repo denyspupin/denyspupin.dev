@@ -1,23 +1,47 @@
-import { NavbarLink, NavbarLinks } from "@/types/navbar";
+"use client";
+
 import Link from "next/link";
+import React from "react";
 
-type Props = {
-  links: NavbarLinks;
-};
+const Navbar = () => {
+  const scrollToHash = (
+    hash: string,
+    e: React.MouseEvent<HTMLAnchorElement>,
+  ) => {
+    e.preventDefault();
+    document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" });
+  };
 
-const Navbar: React.FC<Props> = ({ links }) => {
   return (
-    <nav>
-      <ul className="flex flex-row justify-center gap-x-4 text-right text-xl font-medium transition-colors md:flex-col md:gap-x-0 md:gap-y-4 md:text-4xl lg:gap-y-5 xl:gap-y-8 xl:text-5xl">
-        {links.map((link: NavbarLink) => (
-          <li key={link.id}>
-            <Link href={link.href} className="hover:text-accent">
-              {link.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <ul className="flex gap-x-6">
+      <li>
+        <Link
+          href="#"
+          onClick={(e) => scrollToHash("#intro", e)}
+          className="hover:text-accent"
+        >
+          About
+        </Link>
+      </li>
+      <li>
+        <Link
+          href="#"
+          onClick={(e) => scrollToHash("#experience", e)}
+          className="hover:text-accent"
+        >
+          Experience
+        </Link>
+      </li>
+      <li>
+        <Link
+          href="#"
+          onClick={(e) => scrollToHash("#contact", e)}
+          className="hover:text-accent"
+        >
+          Contact
+        </Link>
+      </li>
+    </ul>
   );
 };
 

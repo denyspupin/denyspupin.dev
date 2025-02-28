@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import FloatingNavbar from "@/components/FloatingNavbar";
-import navbarLinks from "@/data/navbar";
 import { PostHogProvider } from "@/provider";
+import MoveUpButton from "@/components/MoveUpButton";
+import Topbar from "@/components/Topbar";
 
-const inter = Inter({
+const GeistMono = Geist_Mono({
   subsets: ["latin"],
   display: "swap",
 });
@@ -26,12 +26,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${GeistMono.className} antialiased`}>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GAID!} />
         <SpeedInsights />
         <PostHogProvider>
+          <Topbar />
           {children}
-          <FloatingNavbar links={navbarLinks} showHomeLink />
+          <MoveUpButton />
         </PostHogProvider>
       </body>
     </html>

@@ -30,12 +30,12 @@ const Intro = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeIn" }}
         >
-          I'm a software engineer with 7+ years of experience building products
-          across different industries. I enjoy tackling complex problems,
-          working closely with stakeholders, and turning ideas into reality.
-          Whether it’s designing scalable systems or refining user experiences,
-          I love bringing tech and business needs together to create impactful
-          solutions.
+          I&apos;m a software engineer with 7+ years of experience building
+          products across different industries. I enjoy tackling complex
+          problems, working closely with stakeholders, and turning ideas into
+          reality. Whether it’s designing scalable systems or refining user
+          experiences, I love bringing tech and business needs together to
+          create impactful solutions.
         </motion.p>
       </div>
     </div>

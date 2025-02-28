@@ -53,7 +53,7 @@ const TimelineEntry = ({ entry }: TimelineEntryProps) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
             className="flex flex-col gap-y-16 pl-11"
           >
             {entry.projects.map((project) => (

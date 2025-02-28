@@ -5,24 +5,26 @@ const Intro = () => {
   return (
     <div className="mx-auto flex max-w-[1100px] gap-y-9" id="intro">
       <div className="mx-auto flex max-w-3/4 flex-col gap-y-9 py-40 text-xl">
-        <motion.p
+        <motion.div
+          className="flex gap-x-4"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: "easeIn" }}
         >
-          Hi, I’m Denys Pupin{" "}
+          <p>Hi, I’m Denys Pupin </p>
           <motion.span
-            animate={{ scale: 1.2 }}
-            initial={{ scale: 1 }}
+            animate={{ rotate: -10 }}
+            initial={{ rotate: 10 }}
             transition={{
-              duration: 0.5,
+              duration: 0.9,
               repeat: Infinity,
               repeatType: "reverse",
             }}
           >
             👋🏻
           </motion.span>
-        </motion.p>
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}

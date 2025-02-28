@@ -18,7 +18,7 @@ const Navbar = () => {
         <Link
           href="#"
           onClick={(e) => scrollToHash("#intro", e)}
-          className="hover:text-accent"
+          className="hover:text-accent font-medium"
         >
           About
         </Link>
@@ -27,7 +27,7 @@ const Navbar = () => {
         <Link
           href="#"
           onClick={(e) => scrollToHash("#experience", e)}
-          className="hover:text-accent"
+          className="hover:text-accent font-medium"
         >
           Experience
         </Link>
@@ -36,7 +36,7 @@ const Navbar = () => {
         <Link
           href="#"
           onClick={(e) => scrollToHash("#contact", e)}
-          className="hover:text-accent"
+          className="hover:text-accent font-medium"
         >
           Contact
         </Link>

@@ -24,7 +24,6 @@ const Intro = () => {
             👋🏻
           </motion.span>
         </motion.div>
-
         <motion.p
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}

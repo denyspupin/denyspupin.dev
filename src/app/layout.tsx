@@ -31,8 +31,10 @@ export default function RootLayout({
         <SpeedInsights />
         <PostHogProvider>
           <Topbar />
-          {children}
-          <MoveUpButton />
+          <main>
+            {children}
+            <MoveUpButton />
+          </main>
         </PostHogProvider>
       </body>
     </html>

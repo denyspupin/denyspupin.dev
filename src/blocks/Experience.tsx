@@ -3,13 +3,13 @@ import React from "react";
 
 const Experience = () => {
   return (
-    <div
+    <section
       className="mx-auto mb-9 flex max-w-[1100px] flex-col gap-y-9"
       id="experience"
     >
       <h2 className="text-3xl font-medium">Professional Experience</h2>
       <Timeline />
-    </div>
+    </section>
   );
 };
 

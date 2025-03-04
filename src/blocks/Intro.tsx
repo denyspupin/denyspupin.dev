@@ -3,7 +3,7 @@ import * as motion from "motion/react-client";
 
 const Intro = () => {
   return (
-    <div className="mx-auto flex max-w-[1100px] gap-y-9" id="intro">
+    <section className="mx-auto flex max-w-[1100px] gap-y-9" id="intro">
       <div className="mx-auto flex max-w-3/4 flex-col gap-y-9 py-40 text-xl">
         <motion.div
           className="flex gap-x-4"
@@ -37,7 +37,7 @@ const Intro = () => {
           create impactful solutions.
         </motion.p>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -4,7 +4,7 @@ import * as motion from "motion/react-client";
 const Intro = () => {
   return (
     <section className="mx-auto flex max-w-[1100px] gap-y-9" id="intro">
-      <div className="mx-auto flex max-w-3/4 flex-col gap-y-9 py-40 text-xl">
+      <div className="mx-auto flex flex-col gap-y-9 px-8 py-40 md:max-w-3/4 md:px-0 md:text-xl">
         <motion.div
           className="flex gap-x-4"
           initial={{ opacity: 0, y: -20 }}

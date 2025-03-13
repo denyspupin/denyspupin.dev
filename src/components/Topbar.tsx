@@ -6,7 +6,7 @@ import Image from "next/image";
 const Topbar = () => {
   return (
     <nav className="sticky top-0 z-10 h-14 backdrop-blur-md">
-      <div className="mx-auto flex h-full max-w-[1100px] items-center justify-between">
+      <div className="mx-auto flex h-full max-w-[1100px] items-center justify-between px-8 lg:px-0">
         <Link href="/">
           <Image
             height={40}

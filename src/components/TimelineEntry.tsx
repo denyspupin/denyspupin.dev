@@ -18,7 +18,7 @@ const TimelineEntry = ({ entry }: TimelineEntryProps) => {
     <>
       <div className="flex max-w-[900px] flex-col gap-y-4 pl-11">
         <div className="relative flex flex-col">
-          <h3 className="text-2xl font-medium">
+          <h3 className="text-xl font-medium md:text-2xl">
             {entry.position} •{" "}
             <Link
               href={entry.link}
@@ -54,7 +54,7 @@ const TimelineEntry = ({ entry }: TimelineEntryProps) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="flex flex-col gap-y-16 pl-11"
+            className="flex flex-col gap-y-16 pl-4 md:pl-11"
           >
             {entry.projects.map((project) => (
               <div
@@ -62,7 +62,7 @@ const TimelineEntry = ({ entry }: TimelineEntryProps) => {
                 key={project.id}
               >
                 <div className="relative flex flex-col">
-                  <h3 className="text-2xl font-medium">
+                  <h3 className="text-xl font-medium md:text-2xl">
                     {project.position} •{" "}
                     <Link
                       href={project.link}
@@ -72,7 +72,7 @@ const TimelineEntry = ({ entry }: TimelineEntryProps) => {
                     </Link>
                   </h3>
                   <h4 className="text-accent text-sm">{project.timePeriod}</h4>
-                  <span className="bg-accent absolute top-2 left-[-96px] h-4 w-4 rounded-full"></span>
+                  <span className="bg-accent absolute top-2 -left-[69px] h-4 w-4 rounded-full md:-left-[96px]"></span>
                 </div>
                 <p className="text-sm">{project.companyDescription}</p>
                 <p className="text-sm">{project.jobDescription}</p>

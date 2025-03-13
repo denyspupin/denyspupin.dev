@@ -7,7 +7,7 @@ import { FaGithubSquare } from "react-icons/fa";
 function Contact() {
   return (
     <footer className="bg-secondary py-9" id="contact">
-      <div className="mx-auto flex max-w-[1100px] justify-between">
+      <div className="mx-auto flex max-w-[1100px] flex-col justify-between px-8 md:flex-row md:px-0">
         <div className="flex flex-col">
           <h2 className="text-3xl font-medium">Contact</h2>
           <p className="mt-4 font-bold">
@@ -40,7 +40,7 @@ function Contact() {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col items-end gap-y-4">
+        <div className="hidden flex-col items-end gap-y-4 md:flex">
           <p className="font-medium">Want to know more about my experience?</p>
           <DownloadButton />
         </div>

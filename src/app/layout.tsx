@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Geist_Mono, Geist } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import { PostHogProvider } from "@/provider";
 
 const GeistMono = Geist_Mono({
   subsets: ["latin"],
@@ -21,8 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${GeistMono.className} antialiased`}>
-        <main>{children}</main>
-        <Footer />
+        <PostHogProvider>
+          <main>{children}</main>
+          <Footer />
+        </PostHogProvider>
       </body>
     </html>
   );

@@ -39,7 +39,7 @@ export type Tech =
 export type Project = {
   id: string;
   name: string;
-  logo_url: string;
+  logo_key: string;
   description: string;
   active: boolean;
   links: ProjectLink[];

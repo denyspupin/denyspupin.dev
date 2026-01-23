@@ -1,5 +1,6 @@
 import { Geist_Mono, Geist } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const GeistMono = Geist_Mono({
   subsets: ["latin"],
@@ -19,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${GeistMono.className} antialiased`}>{children}</body>
+      <body className={`${GeistMono.className} antialiased`}>
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

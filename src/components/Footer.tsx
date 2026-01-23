@@ -25,7 +25,7 @@ const Footer = async () => {
           ))}
         </div>
         <div className="ml-auto flex">
-          <Button href="#">
+          <Button href={process.env.NEXT_PUBLIC_CV_URL!}>
             <span>Download CV</span> <Download width={16} height={16} />
           </Button>
         </div>

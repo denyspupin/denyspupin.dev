@@ -3,8 +3,14 @@ import ExperienceList from "@/components/ExperienceList";
 import ProjectList from "@/components/ProjectList";
 import Section from "@/components/Section";
 import { Experience, Contact, Project } from "@/types";
-
+import { Metadata } from "next";
 await import("@/data/data.json");
+
+export const metadata: Metadata = {
+  title: "Denys Pupin - Software Engineer",
+  description:
+    "Denys Pupin's personal website. Software engineer with 8+ years of experience building products in different industries.",
+};
 
 export default async function Page() {
   const data = (await import("@/data/data.json")).default;

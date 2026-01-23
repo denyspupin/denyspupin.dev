@@ -21,6 +21,7 @@ const Footer = async () => {
               className="text-muted focus-outline px-1 py-1 hover:text-white focus-visible:text-white"
             >
               {iconRenderer(contact.type, { width: 20, height: 20 })}
+              <span className="sr-only">{contact.label}</span>
             </Link>
           ))}
         </div>

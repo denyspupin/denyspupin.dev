@@ -24,7 +24,7 @@
       "id": "1",
       "role": "Software Engineer",
       "company": "Commerzbank AG",
-      "description": "I’m leading full‑stack delivery of HR self‑service features, from domain modelling to .NET services, a React/TypeScript UI, and integrations with SAP and the enterprise data hub. I built and maintain the Employee Dashboard, with an accessibility‑first component library and CI coverage with Jest. I also designed a knowledge‑ingestion pipeline for an internal OpenAI‑based chatbot using conversational retrieval, improving findability and time‑to‑answer with strong auditability and privacy controls. Alongside delivery, I help define the target architecture and technical strategy for HR IT, including build‑vs‑buy decisions and cross‑system integration blueprints.",
+      "description": "I help ship HR features without the usual corporate sadness: thoughtful UX, accessibility by default, and integrations that actually hold up (SAP + data hub). I tend to take initiative - getting people aligned, raising the bar on component design and testing, and turning “we should” into “it’s done”. I also spend time on architecture and technical strategy, because you deserve better future.",
       "period": "July 2024",
       "techStack": ["ts", "react", "csharp", "dotnet", "azure"]
     },
@@ -32,7 +32,7 @@
       "id": "2",
       "role": "Senior Full-Stack Developer",
       "company": "Keystone Education Group AB",
-      "description": "I delivered enhancements to a high‑traffic web platform, improving the user experience and Core Web Vitals through focused front‑end optimisation. I kicked off a university‑facing portal by defining the architecture, domain model, tech choices, and documentation to support a clean handover and fast iteration. I integrated Sanity CMS to enable content‑driven features with reliable publishing to the front end, and supported experimentation through GrowthBook setup and analysis. I also mentored the team via structured code reviews, pairing, and knowledge sharing across Next.js/TypeScript and .NET.",
+      "description": "I worked on a high‑traffic education marketplace where performance is product: better Core Web Vitals, cleaner UX, fewer “why is this slow?” moments. I also helped start a university-facing portal with architecture, domain model, and documentation that let the team ship without lore. Sanity + GrowthBook rounded it out: content that publishes reliably and experiments that teach us something.",
       "period": "Feb 2024",
       "techStack": [
         "ts",
@@ -49,7 +49,7 @@
       "id": "3",
       "role": "Software Developer & Consultant",
       "company": "MDriven AB",
-      "description": "I significantly enhanced the company’s software offerings. I designed and developed a comprehensive UI components library for Angular applications, empowering users to extend and tailor it for proprietary solutions. I planned and implemented new features, improving the user experience across various products. Extensive refactoring and optimization of legacy code enhanced system performance and maintainability. I created detailed technical documentation, facilitating smoother onboarding and better product utilization. Mentoring junior developers accelerated their growth and bolstered team effectiveness.",
+      "description": "I worked across products, shaping features and UX with a strong bias for consistency. I designed and implemented an Angular UI component library that enabled teams to build and customize their own solutions on top. Behind the scenes, I refactored and optimized legacy areas to improve maintainability and performance, backed by clear technical documentation and active mentoring of junior developers.",
       "period": "Jan 2018",
       "techStack": [
         "ts",
@@ -72,6 +72,7 @@
       "links": [
         {
           "type": "github",
+          "label": "Findmyvar on GitHub",
           "href": "https://github.com/ohleksandra/findmyvar"
         }
       ]

@@ -48,6 +48,7 @@ export type Project = {
 type ProjectLink = {
   type: string;
   href: string;
+  label: string;
 };
 
 export type ProjectList = Project[];

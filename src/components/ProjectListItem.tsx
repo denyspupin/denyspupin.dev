@@ -28,6 +28,7 @@ const ProjectListItem = ({ project, className }: Props) => {
               className="text-muted px-0.5 py-0.5 transition-colors hover:text-white focus-visible:rounded-sm focus-visible:text-white focus-visible:outline-1 focus-visible:outline-offset-0 focus-visible:outline-white focus-visible:outline-dashed"
             >
               {iconRenderer(link.type, { width: 18, height: 18 })}
+              <span className="sr-only">{link.label}</span>
             </Link>
           ))}
       </div>

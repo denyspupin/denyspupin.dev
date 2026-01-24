@@ -1,23 +1,19 @@
-import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { Geist_Mono, Geist } from "next/font/google";
 import "./globals.css";
-import { GoogleAnalytics } from "@next/third-parties/google";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import Footer from "@/components/Footer";
 import { PostHogProvider } from "@/provider";
-import MoveUpButton from "@/components/MoveUpButton";
-import Topbar from "@/components/Topbar";
 
 const GeistMono = Geist_Mono({
   subsets: ["latin"],
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: {
-    template: "%s | Denys Pupin - Software Engineer",
-    default: "Denys Pupin - Software Engineer",
-  },
-};
+const Geist_SansSerif = Geist({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "700"],
+});
 
 export default function RootLayout({
   children,
@@ -27,14 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${GeistMono.className} antialiased`}>
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GAID!} />
-        <SpeedInsights />
         <PostHogProvider>
-          <Topbar />
-          <main>
-            {children}
-            <MoveUpButton />
-          </main>
+          <main>{children}</main>
+          <Footer />
         </PostHogProvider>
       </body>
     </html>

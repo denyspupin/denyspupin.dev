@@ -1,35 +1,49 @@
-import Intro from "../blocks/Intro";
-import Experience from "../blocks/Experience";
-import Contact from "@/blocks/Contact";
+import ContactList from "@/components/ContactList";
+import ExperienceList from "@/components/ExperienceList";
+import ProjectList from "@/components/ProjectList";
+import Section from "@/components/Section";
+import { Experience, Contact, Project } from "@/types";
 import { Metadata } from "next";
+await import("@/data/data.json");
 
 export const metadata: Metadata = {
-  title: "Denys Pupin – Software Engineer",
+  title: "Denys Pupin - Software Engineer",
   description:
-    "Explore Denys Pupin's portfolio showcasing skills and experience.",
-  keywords: "software engineer, full-stack developer, portfolio",
-  openGraph: {
-    title: "Denys Pupin – Software Engineer",
-    description:
-      "Explore Denys Pupin's portfolio showcasing skills and experience.",
-    type: "website",
-    url: "https://denyspupin.dev",
-    images: [
-      {
-        url: "og_image.png",
-      },
-    ],
-  },
+    "Denys Pupin's personal website. Software engineer with 8+ years of experience building products in different industries.",
 };
 
-const Home: React.FC = () => {
+export default async function Page() {
+  const data = (await import("@/data/data.json")).default;
+
+  const contactList = data.contact_list as Contact[];
+  const experienceList = data.work_experience as Experience[];
+  const projectList = data.personal_projects as Project[];
+
   return (
-    <>
-      <Intro />
-      <Experience />
-      <Contact />
-    </>
+    <div className="mr-auto ml-auto flex w-full flex-col items-start gap-y-14 px-4 pt-20 pb-16 lg:max-w-183 lg:px-0">
+      <div className="flex flex-col justify-start gap-y-2 px-4 font-mono">
+        <h1 className="text-3xl font-semibold text-white">Denys Pupin</h1>
+        <h2 className="text-sm text-(--muted)">Software Engineer</h2>
+      </div>
+      <div className="flex flex-row px-4">
+        <p className="font-mono lg:max-w-150">
+          Hi 👋🏻. I&apos;m a software engineer with 8+ years of experience
+          building products in different industries. I enjoy working through
+          complex challenges with people who care about the outcome, then
+          turning that work into something real and useful. Whether it’s scaling
+          backend systems or fine-tuning UX details, I like connecting the dots
+          between tech and business.
+        </p>
+      </div>
+      <Section header="Get in touch">
+        <ContactList list={contactList} />
+      </Section>
+      <Section header="Experience" className="timeline-border">
+        <ExperienceList experiences={experienceList} className="pt-10" />
+      </Section>
+      <Section header="Projects">
+        <ProjectList projects={projectList} />
+      </Section>
+    </div>
   );
-};
-
-export default Home;
+}

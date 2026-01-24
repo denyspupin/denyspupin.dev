@@ -1,0 +1,81 @@
+{
+  "contact_list": [
+    {
+      "id": "1",
+      "type": "email",
+      "href": "mailto:denyspupin.dev@gmail.com",
+      "label": "Email"
+    },
+    {
+      "id": "2",
+      "type": "github",
+      "href": "https://github.com/denyspupin",
+      "label": "GitHub"
+    },
+    {
+      "id": "3",
+      "type": "linkedin",
+      "href": "https://www.linkedin.com/in/denyspupin/",
+      "label": "LinkedIn"
+    }
+  ],
+  "work_experience": [
+    {
+      "id": "1",
+      "role": "Software Engineer",
+      "company": "Commerzbank AG",
+      "description": "I help ship HR features without the usual corporate sadness: thoughtful UX, accessibility by default, and integrations that actually hold up (SAP + data hub). I tend to take initiative - getting people aligned, raising the bar on component design and testing, and turning “we should” into “it’s done”. I also spend time on architecture and technical strategy, because you deserve better future.",
+      "period": "July 2024",
+      "techStack": ["ts", "react", "csharp", "dotnet", "azure"]
+    },
+    {
+      "id": "2",
+      "role": "Senior Full-Stack Developer",
+      "company": "Keystone Education Group AB",
+      "description": "I worked on a high‑traffic education marketplace where performance is product: better Core Web Vitals, cleaner UX, fewer “why is this slow?” moments. I also helped start a university-facing portal with architecture, domain model, and documentation that let the team ship without lore. Sanity + GrowthBook rounded it out: content that publishes reliably and experiments that teach us something.",
+      "period": "Feb 2024",
+      "techStack": [
+        "ts",
+        "nextjs",
+        "materialui",
+        "dotnet",
+        "csharp",
+        "graphql",
+        "sanity",
+        "aws"
+      ]
+    },
+    {
+      "id": "3",
+      "role": "Software Developer & Consultant",
+      "company": "MDriven AB",
+      "description": "I worked across products, shaping features and UX with a strong bias for consistency. I designed and implemented an Angular UI component library that enabled teams to build and customize their own solutions on top. Behind the scenes, I refactored and optimized legacy areas to improve maintainability and performance, backed by clear technical documentation and active mentoring of junior developers.",
+      "period": "Jan 2018",
+      "techStack": [
+        "ts",
+        "react",
+        "angular",
+        "rxjs",
+        "csharp",
+        "dotnet",
+        "azure"
+      ]
+    }
+  ],
+  "personal_projects": [
+    {
+      "id": "1",
+      "logo_key": "findmyvar",
+      "name": "Findmyvar",
+      "description": "Figma plugin to find every place where variables are used in your design file.",
+      "active": false,
+      "links": [
+        {
+          "type": "github",
+          "label": "Findmyvar on GitHub",
+          "href": "https://github.com/ohleksandra/findmyvar"
+        }
+      ]
+    }
+  ]
+}

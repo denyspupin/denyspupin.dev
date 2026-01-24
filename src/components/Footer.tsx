@@ -12,7 +12,7 @@ const Footer = async () => {
 
   return (
     <footer className="border-gradient py-6">
-      <div className="mr-auto ml-auto flex w-full px-4 py-6 lg:max-w-[732px]">
+      <div className="mr-auto ml-auto flex w-full px-4 py-6 lg:max-w-183">
         <div className="flex items-center justify-start gap-x-4">
           {contactList.reverse().map((contact) => (
             <Link

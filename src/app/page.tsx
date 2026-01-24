@@ -20,13 +20,13 @@ export default async function Page() {
   const projectList = data.personal_projects as Project[];
 
   return (
-    <div className="mr-auto ml-auto flex w-full flex-col items-start gap-y-14 pt-20 pb-16 lg:max-w-[732px]">
+    <div className="mr-auto ml-auto flex w-full flex-col items-start gap-y-14 px-4 pt-20 pb-16 lg:max-w-183 lg:px-0">
       <div className="flex flex-col justify-start gap-y-2 px-4 font-mono">
         <h1 className="text-3xl font-semibold text-white">Denys Pupin</h1>
-        <h2 className="text-sm text-[var(--muted)]">Software Engineer</h2>
+        <h2 className="text-sm text-(--muted)">Software Engineer</h2>
       </div>
       <div className="flex flex-row px-4">
-        <p className="font-mono lg:max-w-[600px]">
+        <p className="font-mono lg:max-w-150">
           Hi 👋🏻. I&apos;m a software engineer with 8+ years of experience
           building products in different industries. I enjoy working through
           complex challenges with people who care about the outcome, then

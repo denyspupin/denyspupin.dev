@@ -68,12 +68,17 @@
       "logo_key": "findmyvar",
       "name": "Findmyvar",
       "description": "Figma plugin to find every place where variables are used in your design file.",
-      "active": false,
+      "active": true,
       "links": [
         {
           "type": "github",
           "label": "Findmyvar on GitHub",
           "href": "https://github.com/ohleksandra/findmyvar"
+        },
+        {
+          "type": "figma",
+          "label": "Findmyvar on Figma",
+          "href": "https://www.figma.com/community/plugin/1608643867941472937/findmyvar"
         }
       ]
     }

@@ -1,6 +1,5 @@
 import { Project } from "@/types";
 import ProjectListItem from "./ProjectListItem";
-import { twMerge } from "tailwind-merge";
 
 type Props = {
   projects: Project[];
@@ -9,7 +8,7 @@ type Props = {
 
 const ProjectList = ({ projects, className }: Props) => {
   return (
-    <div className={twMerge("flex flex-col", className)}>
+    <div className={`project-list ${className ?? ""}`}>
       {projects.map((project) => (
         <ProjectListItem key={project.id} project={project} />
       ))}

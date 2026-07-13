@@ -2,48 +2,74 @@ import ContactList from "@/components/ContactList";
 import ExperienceList from "@/components/ExperienceList";
 import ProjectList from "@/components/ProjectList";
 import Section from "@/components/Section";
-import { Experience, Contact, Project } from "@/types";
+import { Contact, Experience, Project } from "@/types";
+import { ArrowDownRight, ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 import { Metadata } from "next";
-await import("@/data/data.json");
 
 export const metadata: Metadata = {
-  title: "Denys Pupin - Software Engineer",
+  metadataBase: new URL("https://denyspupin.dev"),
+  title: "Denys Pupin — Software Engineer",
   description:
-    "Denys Pupin's personal website. Software engineer with 8+ years of experience building products in different industries.",
+    "Denys Pupin is a software engineer who builds considered, resilient web products.",
+  alternates: { canonical: "https://denyspupin.dev" },
 };
 
 export default async function Page() {
   const data = (await import("@/data/data.json")).default;
-
   const contactList = data.contact_list as Contact[];
   const experienceList = data.work_experience as Experience[];
   const projectList = data.personal_projects as Project[];
 
   return (
-    <div className="mr-auto ml-auto flex w-full flex-col items-start gap-y-14 px-4 pt-20 pb-16 lg:max-w-183 lg:px-0">
-      <div className="flex flex-col justify-start gap-y-2 px-4 font-mono">
-        <h1 className="text-3xl font-semibold text-white">Denys Pupin</h1>
-        <h2 className="text-sm text-(--muted)">Software Engineer</h2>
-      </div>
-      <div className="flex flex-row px-4">
-        <p className="font-mono lg:max-w-150">
-          Hi 👋🏻. I&apos;m a software engineer with 8+ years of experience
-          building products in different industries. I enjoy working through
-          complex challenges with people who care about the outcome, then
-          turning that work into something real and useful. Whether it’s scaling
-          backend systems or fine-tuning UX details, I like connecting the dots
-          between tech and business.
-        </p>
-      </div>
-      <Section header="Get in touch">
-        <ContactList list={contactList} />
-      </Section>
-      <Section header="Experience" className="timeline-border">
-        <ExperienceList experiences={experienceList} className="pt-10" />
-      </Section>
-      <Section header="Projects">
-        <ProjectList projects={projectList} />
-      </Section>
+    <div className="site-shell">
+      <header className="topbar">
+        <Link href="/" className="brand">
+          Denys Pupin<span>.</span>
+        </Link>
+        <nav aria-label="Primary navigation">
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+      <main>
+        <section className="hero" aria-labelledby="intro-title">
+          <div className="hero-copy">
+            <h1 id="intro-title">Software engineer</h1>
+            <p>
+              Web applications, product interfaces, and the systems behind them.
+            </p>
+            <div className="hero-actions">
+              <a
+                className="primary-action"
+                href="mailto:denyspupin.dev@gmail.com"
+              >
+                Email me <ArrowUpRight size={17} />
+              </a>
+              <a className="secondary-action" href="#experience">
+                Experience <ArrowDownRight size={17} />
+              </a>
+            </div>
+          </div>
+        </section>
+        <Section id="experience" header="Experience">
+          <ExperienceList experiences={experienceList} />
+        </Section>
+        <Section id="projects" header="Selected work">
+          <ProjectList projects={projectList} />
+        </Section>
+        <Section
+          id="contact"
+          header="Let’s work together"
+          className="contact-section"
+        >
+          <p className="contact-copy">
+            For product work, technical collaboration, or a simple hello:
+          </p>
+          <ContactList list={contactList} />
+        </Section>
+      </main>
     </div>
   );
 }

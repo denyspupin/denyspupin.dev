@@ -7,7 +7,7 @@ type Props = {
 
 const ContactList = ({ list }: Props) => {
   return (
-    <div className="flex flex-col gap-y-3.5">
+    <div className="contact-list">
       {list.map((contact: Contact) => (
         <ContactListItem
           key={contact.id}

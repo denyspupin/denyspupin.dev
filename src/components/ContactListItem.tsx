@@ -11,7 +11,7 @@ const ContactListItem = ({ children, type, href }: Props) => {
   return (
     <Link
       href={href}
-      className="flex items-center gap-x-2 px-1.5 py-0.5 font-mono text-sm text-[var(--muted)] transition-colors hover:text-white focus-visible:rounded-sm focus-visible:text-white focus-visible:outline-1 focus-visible:outline-white focus-visible:outline-dashed"
+      className="contact-link"
     >
       {iconRenderer(type)}
       <span>{children}</span>

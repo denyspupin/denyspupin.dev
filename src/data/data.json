@@ -67,7 +67,7 @@
       "id": "1",
       "logo_key": "findmyvar",
       "name": "Findmyvar",
-      "description": "Figma plugin to find every place where variables are used in your design file.",
+      "description": "A Figma plugin for tracing a variable’s usage across a file, making design-system changes easier to assess.",
       "active": true,
       "links": [
         {

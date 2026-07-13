@@ -1,7 +1,5 @@
 import { Project } from "@/types";
 import iconRenderer from "@/utils/iconRenderer";
-import Label from "./ui/label";
-import { twMerge } from "tailwind-merge";
 import Link from "next/link";
 
 type Props = {
@@ -11,31 +9,29 @@ type Props = {
 
 const ProjectListItem = ({ project, className }: Props) => {
   return (
-    <div className={twMerge("flex flex-col gap-y-2", className)}>
-      <div className="flex items-center justify-start gap-x-2.5">
-        <figure>{iconRenderer("findmyvar", { width: 32, height: 32 })}</figure>
-        <h6 className="font-mono text-xl font-medium text-white">
-          {project.name}
-        </h6>
-        {!project.active && <Label>coming soon</Label>}
-        {project.links.length > 0 &&
-          project.links.map((link) => (
-            <Link
-              key={link.type}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted px-0.5 py-0.5 transition-colors hover:text-white focus-visible:rounded-sm focus-visible:text-white focus-visible:outline-1 focus-visible:outline-offset-0 focus-visible:outline-white focus-visible:outline-dashed"
-            >
-              {iconRenderer(link.type, { width: 18, height: 18 })}
-              <span className="sr-only">{link.label}</span>
-            </Link>
-          ))}
+    <article className={`project-item ${className ?? ""}`}>
+      <figure>{iconRenderer(project.logo_key, { width: 34, height: 34 })}</figure>
+      <div className="project-copy">
+        <div className="project-title-row">
+          <h3>{project.name}</h3>
+          {!project.active && <span className="project-status">In progress</span>}
+        </div>
+        <p>{project.description}</p>
       </div>
-      <div>
-        <p className="text-muted font-sans font-light">{project.description}</p>
+      <div className="project-links">
+        {project.links.map((link) => (
+          <Link
+            key={link.type}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {iconRenderer(link.type, { width: 17, height: 17 })}
+            <span>{link.label.replace(`Findmyvar on `, "")}</span>
+          </Link>
+        ))}
       </div>
-    </div>
+    </article>
   );
 };
 

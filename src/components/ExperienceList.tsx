@@ -1,6 +1,5 @@
 import { Experience } from "@/types";
 import ExperienceListItem from "./ExperienceListItem";
-import { twMerge } from "tailwind-merge";
 
 type Props = {
   experiences?: Experience[];
@@ -9,7 +8,7 @@ type Props = {
 
 const ExperienceList = ({ experiences, className }: Props) => {
   return (
-    <div className={twMerge("flex w-full flex-col gap-y-16", className)}>
+    <div className={`experience-list ${className ?? ""}`}>
       {experiences &&
         experiences.map((experience) => (
           <ExperienceListItem key={experience.id} experience={experience} />

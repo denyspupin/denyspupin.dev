@@ -1,74 +1,98 @@
 @import "tailwindcss";
 
-@theme {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  /* --color-accent: var(--accent); */
-  /* --color-secondary: #2c2c2c; */
-}
-
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
-}
-
 :root {
-  --background: oklch(0.1913 0 0);
-  --foreground: oklch(0.7316 0 0);
-  --muted: oklch(0.7219 0 0);
-  --header-bg: oklch(0.2768 0 0);
-  --font-mono: "Geist Mono", monospace;
-  --font-sans: "Geist", sans-serif;
-
-  --footer-gradient: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.55) 33%,
-    rgba(255, 255, 255, 0.55) 66%,
-    rgba(255, 255, 255, 0.1) 100%
-  );
-
-  --timeline-gradient: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.02) 0%,
-    rgba(255, 255, 255, 0.51) 50%,
-    rgba(255, 255, 255, 0.02) 100%
-  );
+  --bg: #151714;
+  --text: #f3f2ed;
+  --muted: #a3a49e;
+  --line: #30332e;
+  --accent: #d7ff4f;
+  --accent-ink: #1c2114;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text); }
+body::before {
+  position: fixed; inset: 0; z-index: -1; content: ""; pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, black, transparent 68%);
 }
+a { color: inherit; }
+::selection { background: var(--accent); color: var(--accent-ink); }
 
-.border-gradient {
-  border-top-width: 1px;
-  border-style: solid;
-  border-image: var(--footer-gradient) 1 stretch;
-}
+.site-shell, .site-footer > div { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+.topbar { height: 88px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.brand { font-size: .95rem; font-weight: 650; letter-spacing: -.04em; text-decoration: none; }
+.brand span { color: var(--accent); }
+.topbar nav { display: flex; gap: 26px; }
+.topbar nav a { color: var(--muted); font-size: .78rem; text-decoration: none; transition: color .18s ease; }
+.topbar nav a:hover { color: var(--accent); }
 
-.timeline-border {
-  border-left-width: 1px;
-  border-style: solid;
-  border-image: var(--timeline-gradient) 1 stretch;
-}
+.hero { position: relative; display: flex; align-items: center; min-height: 440px; overflow: hidden; border-bottom: 1px solid var(--line); }
+.hero-copy { position: relative; z-index: 1; max-width: 825px; }
+.experience-period { margin: 0; color: var(--accent); font-size: .72rem; font-weight: 650; letter-spacing: .11em; text-transform: uppercase; }
+.hero h1 { max-width: 810px; margin: 0; font-size: clamp(2.15rem, 4vw, 3.35rem); font-weight: 520; line-height: 1; letter-spacing: -.07em; text-wrap: balance; }
+.hero-copy > p:not(.overline) { max-width: 670px; margin: 24px 0; color: var(--muted); font-size: .96rem; line-height: 1.7; }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; }
+.primary-action, .secondary-action { display: inline-flex; align-items: center; gap: 8px; font-size: .84rem; font-weight: 620; text-decoration: none; }
+.primary-action { padding: 13px 16px; background: var(--accent); border-radius: 2px; color: var(--accent-ink); transition: transform .2s ease, background .2s ease; }
+.primary-action:hover { transform: translateY(-2px); background: #e2ff7b; }
+.secondary-action { color: var(--muted); }
+.secondary-action:hover { color: var(--text); }
 
-.focus-outline:focus-visible {
-  outline: 1px dashed var(--color-white);
-  border-radius: 0.25rem;
+.content-section { padding: 92px 0; border-bottom: 1px solid var(--line); }
+.section-heading { margin-bottom: 38px; }
+.section-heading h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.4rem); font-weight: 510; line-height: .96; letter-spacing: -.065em; }
+
+.experience-list, .project-list { width: 100%; border-top: 1px solid var(--line); }
+.experience-item { display: grid; grid-template-columns: 148px minmax(0, 1fr); column-gap: 26px; padding: 29px 0 30px; border-bottom: 1px solid var(--line); }
+.experience-title { grid-column: 2; }
+.experience-title h3, .project-title-row h3 { margin: 0; font-size: 1.14rem; font-weight: 620; letter-spacing: -.035em; }
+.experience-title p { margin: 6px 0 0; color: var(--muted); font-size: .97rem; }
+.experience-description { grid-column: 2; max-width: 690px; margin: 17px 0 0; color: var(--muted); font-size: .97rem; line-height: 1.65; }
+.tech-list { grid-column: 2; display: flex; align-items: center; gap: 12px; margin: 19px 0 0; padding: 0; list-style: none; }
+.tech-list li { display: flex; color: var(--muted); opacity: .88; transition: opacity .18s ease, transform .18s ease; }
+.tech-list li:hover { opacity: 1; transform: translateY(-2px); }
+
+.project-item { display: grid; grid-template-columns: 58px minmax(0, 1fr) auto; align-items: center; gap: 20px; padding: 27px 0; border-bottom: 1px solid var(--line); }
+.project-item figure { display: flex; margin: 0; }
+.project-copy p { max-width: 610px; margin: 9px 0 0; color: var(--muted); font-size: .96rem; line-height: 1.55; }
+.project-title-row { display: flex; gap: 12px; align-items: center; }
+.project-status { padding: 3px 6px; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent), transparent 62%); font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; }
+.project-links { display: flex; align-items: center; gap: 18px; }
+.project-links a { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font-size: .8rem; text-decoration: none; transition: color .18s ease; }
+.project-links a:hover { color: var(--accent); }
+
+.contact-section { padding-bottom: 98px; }
+.contact-copy { max-width: 570px; margin: -9px 0 27px; color: var(--muted); font-size: 1.08rem; line-height: 1.62; }
+.contact-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.contact-link { display: inline-flex; align-items: center; gap: 8px; padding: 11px 13px; border: 1px solid var(--line); color: var(--text); font-size: .82rem; font-weight: 560; text-decoration: none; transition: background .18s ease, border-color .18s ease, color .18s ease; }
+.contact-link:hover { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.site-footer { border-top: 1px solid var(--line); }
+.site-footer > div { display: flex; align-items: center; justify-content: space-between; min-height: 82px; color: var(--muted); font-size: .74rem; }
+.site-footer p { margin: 0; }
+.footer-links { display: flex; gap: 17px; }
+.footer-link { display: flex; transition: color .18s ease; }
+.footer-link:hover { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+@media (max-width: 700px) {
+  .site-shell, .site-footer > div { width: min(100% - 32px, 1120px); }
+  .topbar { height: 72px; }
+  .topbar nav { gap: 14px; }
+  .topbar nav a { font-size: .7rem; }
+  .hero { min-height: 455px; align-items: flex-start; padding-top: 92px; }
+  .hero h1 { font-size: clamp(2.1rem, 10vw, 2.8rem); }
+  .hero-copy > p:not(.overline) { max-width: 510px; font-size: 1rem; }
+  .statement, .content-section { padding: 65px 0; }
+  .experience-item { grid-template-columns: 1fr; row-gap: 0; padding: 25px 0; }
+  .experience-period, .experience-title, .experience-description, .tech-list { grid-column: 1; }
+  .experience-period { margin-bottom: 13px; }
+  .experience-description { margin-top: 15px; }
+  .project-item { grid-template-columns: 42px minmax(0, 1fr); gap: 14px; }
+  .project-links { grid-column: 2; margin-top: -3px; }
+  .project-links a { font-size: .76rem; }
+  .contact-section { padding-bottom: 70px; }
+  .site-footer > div { min-height: 75px; }
 }

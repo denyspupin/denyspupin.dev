@@ -9,11 +9,17 @@ import SuspendedPostHogPageView from "./components/PostHogPageView";
 
 export function PostHogProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
-    posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
+    const apiKey = process.env.NEXT_PUBLIC_POSTHOG_KEY;
+
+    if (!apiKey) return;
+
+    posthog.init(apiKey, {
       api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
       person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well
     });
   }, []);
+
+  if (!process.env.NEXT_PUBLIC_POSTHOG_KEY) return <>{children}</>;
 
   return (
     <PHProvider client={posthog}>

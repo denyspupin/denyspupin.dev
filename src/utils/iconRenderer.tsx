@@ -72,6 +72,15 @@ export default function iconRenderer(
           height={size.height}
         />
       );
+    case "telepromptme":
+      return (
+        <Image
+          src="/telepromptme-icon.png"
+          alt=""
+          width={size.width}
+          height={size.height}
+        />
+      );
     case "figma":
       return <Figma width={size.width} height={size.height} />;
     case "external":

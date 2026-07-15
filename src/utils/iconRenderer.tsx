@@ -19,7 +19,7 @@ import {
   Figma,
 } from "@/components/ui/icons";
 import { Contact, Tech } from "@/types";
-import { Mail } from "lucide-react";
+import { LibraryBig, Mail } from "lucide-react";
 
 export default function iconRenderer(
   type: Contact["type"] | Tech | string,
@@ -62,6 +62,8 @@ export default function iconRenderer(
       return <TailwindCSS width={size.width} height={size.height} />;
     case "findmyvar":
       return <FindMyVar width={size.width} height={size.height} />;
+    case "flashforge":
+      return <LibraryBig width={size.width} height={size.height} />;
     case "figma":
       return <Figma width={size.width} height={size.height} />;
     default:

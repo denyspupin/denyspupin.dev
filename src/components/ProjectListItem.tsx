@@ -27,7 +27,7 @@ const ProjectListItem = ({ project, className }: Props) => {
             rel="noopener noreferrer"
           >
             {iconRenderer(link.type, { width: 17, height: 17 })}
-            <span>{link.label.replace(`Findmyvar on `, "")}</span>
+            <span>{link.label.replace(`${project.name} on `, "")}</span>
           </Link>
         ))}
       </div>

@@ -19,7 +19,8 @@ import {
   Figma,
 } from "@/components/ui/icons";
 import { Contact, Tech } from "@/types";
-import { LibraryBig, Mail } from "lucide-react";
+import Image from "next/image";
+import { ExternalLink, Mail } from "lucide-react";
 
 export default function iconRenderer(
   type: Contact["type"] | Tech | string,
@@ -63,9 +64,18 @@ export default function iconRenderer(
     case "findmyvar":
       return <FindMyVar width={size.width} height={size.height} />;
     case "flashforge":
-      return <LibraryBig width={size.width} height={size.height} />;
+      return (
+        <Image
+          src="/flashforge-logo.png"
+          alt=""
+          width={size.width}
+          height={size.height}
+        />
+      );
     case "figma":
       return <Figma width={size.width} height={size.height} />;
+    case "external":
+      return <ExternalLink width={size.width} height={size.height} />;
     default:
       return null;
   }

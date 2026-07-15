@@ -93,6 +93,11 @@
           "type": "github",
           "label": "Flashforge on GitHub",
           "href": "https://github.com/denyspupin/flashforge"
+        },
+        {
+          "type": "external",
+          "label": "Try it out",
+          "href": "https://flashforge.denyspupin.dev"
         }
       ]
     }

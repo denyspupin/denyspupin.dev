@@ -100,6 +100,21 @@
           "href": "https://flashforge.denyspupin.dev"
         }
       ]
+    },
+    {
+      "id": "3",
+      "logo_key": "telepromptme",
+      "name": "TelepromptMe",
+      "description": "A native macOS teleprompter that keeps your script near the camera and follows along as you speak using on-device speech recognition.",
+      "active": false,
+      "status": "In active development",
+      "links": [
+        {
+          "type": "github",
+          "label": "TelepromptMe on GitHub",
+          "href": "https://github.com/denyspupin/teleprompt-me"
+        }
+      ]
     }
   ]
 }

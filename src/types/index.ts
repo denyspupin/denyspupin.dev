@@ -42,6 +42,7 @@ export type Project = {
   logo_key: string;
   description: string;
   active: boolean;
+  status?: string;
   links: ProjectLink[];
 };
 

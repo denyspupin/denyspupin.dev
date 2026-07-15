@@ -14,7 +14,11 @@ const ProjectListItem = ({ project, className }: Props) => {
       <div className="project-copy">
         <div className="project-title-row">
           <h3>{project.name}</h3>
-          {!project.active && <span className="project-status">In progress</span>}
+          {!project.active && (
+            <span className="project-status">
+              {project.status ?? "In progress"}
+            </span>
+          )}
         </div>
         <p>{project.description}</p>
       </div>

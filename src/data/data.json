@@ -81,6 +81,25 @@
           "href": "https://www.figma.com/community/plugin/1608643867941472937/findmyvar"
         }
       ]
+    },
+    {
+      "id": "2",
+      "logo_key": "flashforge",
+      "name": "Flashforge",
+      "description": "A vocabulary-learning platform with flashcard decks, focused study sessions, and gamification through XP and streaks.",
+      "active": true,
+      "links": [
+        {
+          "type": "github",
+          "label": "Flashforge on GitHub",
+          "href": "https://github.com/denyspupin/flashforge"
+        },
+        {
+          "type": "external",
+          "label": "Try it out",
+          "href": "https://flashforge.denyspupin.dev"
+        }
+      ]
     }
   ]
 }

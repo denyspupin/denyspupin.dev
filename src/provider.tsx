@@ -16,6 +16,7 @@ export function PostHogProvider({ children }: { children: ReactNode }) {
     posthog.init(apiKey, {
       api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
       person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well
+      defaults: "2026-05-30",
     });
   }, []);
 
